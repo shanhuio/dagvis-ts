@@ -1,0 +1,61 @@
+// Copyright (C) 2021  Shanhu Tech Inc.
+//
+// This program is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Affero General Public License as published by the
+// Free Software Foundation, either version 3 of the License, or (at your
+// option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+// FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License
+// for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+@color-in: #aaf;
+@color-in2: #ddf;
+@color-out: #9c9;
+@color-out2: #ded;
+@color-focus: #fcc;
+
+@edge-in: #55f;
+@edge-in2: #bbf;
+@edge-out: #3c3;
+@edge-out2: #bdb;
+
+.svg-text {
+    text-anchor: middle;
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    font-size: 14px;
+}
+
+svg {
+    text#measure { .svg-text(); }
+}
+
+svg.dag {
+    polygon { cursor: pointer; fill: #d7d7d7; }
+    polygon.in { fill: @color-in; }
+    polygon.in2 { fill: @color-in2; }
+    polygon.out { fill: @color-out; }
+    polygon.out2 { fill: @color-out2; }
+    polygon.focus { fill: @color-focus; }
+
+    path {
+        fill: none;
+        stroke-width: 1;
+        stroke-linejoin: round;
+        stroke: #d7d7d7;
+    }
+
+    path.in { stroke: @edge-in; }
+    path.in2 { stroke: @edge-in2; }
+    path.out { stroke: @edge-out; }
+    path.out2 { stroke: @edge-out2; }
+
+    text {
+        .svg-text();
+        cursor: pointer;
+    }
+}
