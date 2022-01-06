@@ -23,4 +23,4 @@ fmt:
 
 dist: all
 	make -C _
-	mv _/jarvis.zip .
+	mv _/dagvis.zip .
